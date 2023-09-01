@@ -9,7 +9,7 @@ export const Main = () => {
       <FlexWrapper align={"center"} justify={"space-around"}>
         <div>
           <span>Hi There</span>
-          <h2>I am Svetlana Dyablo</h2>
+          <Name>I am Svetlana Dyablo</Name>
           <MainTitle>A Web Developer. </MainTitle>
         </div>
         <Photo src={photo} alt="" />
