@@ -1,25 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Menu = () => {
+// первый вариант типизации
+// type MenuPropsType = {
+//   menuItems: Array<string>
+// }
+// второй вариант задания типов пропс (используетс для одного значения)
+
+export const Menu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledMenu>
       <ul>
-        <li>
-          <a href="v#">Home</a>
-        </li>
-        <li>
-          <a href="v#">Skills</a>
-        </li>
-        <li>
-          <a href="v#">Works</a>
-        </li>
-        <li>
-          <a href="v#">Testimony</a>
-        </li>
-        <li>
-          <a href="v#">Contact</a>
-        </li>
+        {props.menuItems.map((item: string, index: number) => {
+          return (
+            <li key={index}>
+              <a href="v#">{item}</a>
+            </li>
+          );
+        })}
       </ul>
     </StyledMenu>
   );
@@ -29,5 +27,6 @@ const StyledMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
+    justify-content: center;
   }
 `;
