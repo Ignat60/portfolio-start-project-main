@@ -13,8 +13,8 @@ export const Work = (props: WorkPropsType) => {
       <Image src={props.src} alt="" />
       <Title>{props.title}</Title>
       <Text>{props.text}</Text>
-      <Link href={"v#"}>demo</Link>
-      <Link href={"v#"}>code</Link>
+      <Link href={"v#"}>demo </Link>
+      <Link href={"v#"}>code </Link>
     </StyledWork>
   );
 };
