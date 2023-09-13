@@ -10,7 +10,7 @@ import { theme } from "../../../styles/Theme";
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
   return (
-    <StyledMenu>
+    <StyledHeaderMenu>
       <ul>
         {props.menuItems.map((item: string, index: number) => {
           return (
@@ -28,11 +28,11 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
           );
         })}
       </ul>
-    </StyledMenu>
+    </StyledHeaderMenu>
   );
 };
 
-const StyledMenu = styled.nav`
+const StyledHeaderMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
