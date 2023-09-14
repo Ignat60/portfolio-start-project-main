@@ -49,4 +49,16 @@ section:nth-of-type(odd) {
 section:nth-of-type(even) {
     background-color: ${theme.color.secondaryBg};
 }
+
+p {
+    font-size: 14px;
+  font-weight: 400;
+}
+
+h3 {
+    font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 `;
