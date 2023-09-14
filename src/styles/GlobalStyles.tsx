@@ -37,6 +37,10 @@ button {
 Main {
     background-color: ${theme.color.secondaryBg};
 }
+ 
+section {
+    padding: 100px 0 ;
+} 
 
 section:nth-of-type(odd) {
     background-color: ${theme.color.primaryBg};
