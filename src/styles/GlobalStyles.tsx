@@ -24,6 +24,7 @@ export const GlobalStyles = createGlobalStyle`
 
 a {
     text-decoration: none;
+    color: ${theme.color.font}
 }
 ul {
     list-style:none;
@@ -59,6 +60,6 @@ h3 {
     font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  letter-spacing: 1px;
+ 
 }
 `;

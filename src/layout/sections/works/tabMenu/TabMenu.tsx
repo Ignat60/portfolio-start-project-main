@@ -7,26 +7,36 @@ import styled from "styled-components";
 // }
 // второй вариант задания типов пропс (используетс для одного значения)
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+export const TabMenu = (props: { menuItems: Array<string> }) => {
   return (
-    <StyledMenu>
+    <StyledTabMenu>
       <ul>
         {props.menuItems.map((item: string, index: number) => {
           return (
-            <li key={index}>
-              <a href="v#">{item}</a>
-            </li>
+            <ListItem key={index}>
+              <Link href="v#">{item}</Link>
+            </ListItem>
           );
         })}
       </ul>
-    </StyledMenu>
+    </StyledTabMenu>
   );
 };
 
-const StyledMenu = styled.nav`
+const StyledTabMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
     justify-content: center;
   }
+`;
+
+const ListItem = styled.li``;
+
+const Link = styled.a`
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px;
 `;

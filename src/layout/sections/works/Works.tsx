@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../assets/components/SectionTitle";
-import { Menu } from "../../../assets/components/menu/Menu";
+import { TabMenu } from "./tabMenu/TabMenu";
 import { FlexWrapper } from "../../../assets/components/flexWrapper";
 import { Work } from "./work/Work";
 import socialImg from "./../../../assets/images/picture_1.png";
@@ -15,7 +15,7 @@ export const Works = () => {
     <StyledWorks>
       <Container>
         <SectionTitle>My Works</SectionTitle>
-        <Menu menuItems={worksItems} />
+        <TabMenu menuItems={worksItems} />
 
         <FlexWrapper justify="space-between">
           <Work
