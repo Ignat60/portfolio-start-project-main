@@ -24,7 +24,8 @@ export const GlobalStyles = createGlobalStyle`
 
 a {
     text-decoration: none;    
-    color: ${theme.color.font}
+    color: ${theme.color.font};
+    cursor: pointer;
 }
 ul {
     list-style:none;

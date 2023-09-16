@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../../assets/components/icon/Icon";
 import { FlexWrapper } from "../../assets/components/flexWrapper";
+import { theme } from "../../styles/Theme";
 
 export const Footer = () => {
   return (
     <StyledFooter>
       <FlexWrapper direction={"column"} align={"center"}>
-        <Name>Cvetlana</Name>
+        <Name>Svetlana</Name>
         <SocialList>
           <SocialItem>
             <SocialLink>
@@ -57,19 +58,46 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: #fbdada;
-  min-height: 20vh;
+  background-color: ${theme.color.primaryBg};
+  padding: 40px 0;
 `;
 
-const Name = styled.span``;
+const Name = styled.span`
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 3px;
+`;
 
 const SocialList = styled.ul`
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  margin: 30px 0;
 `;
 
 const SocialItem = styled.li``;
 
-const SocialLink = styled.a``;
+const SocialLink = styled.a`
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  width: 35px;
+  height: 35px;
 
-const Copyright = styled.small``;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: ${theme.color.accent};
+
+  &:hover {
+    color: ${theme.color.primaryBg};
+    transform: translateY(-4px);
+  }
+`;
+
+const Copyright = styled.small`
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.5;
+`;
