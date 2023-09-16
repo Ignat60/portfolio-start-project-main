@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+// import { theme } from "../../../../styles/Theme";
+import { Link } from "../../../../assets/components/Link";
 
 // первый вариант типизации
 // type MenuPropsType = {
@@ -24,19 +26,12 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledTabMenu = styled.nav`
+  margin-bottom: 40px;
   ul {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
   }
 `;
 
 const ListItem = styled.li``;
-
-const Link = styled.a`
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 10px;
-`;
