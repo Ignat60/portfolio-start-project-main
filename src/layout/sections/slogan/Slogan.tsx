@@ -2,17 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../assets/components/SectionTitle";
 import { Button } from "../../../assets/components/Button";
+import { Container } from "../../../assets/components/Container";
+import { FlexWrapper } from "../../../assets/components/flexWrapper";
 
 export const Slogan = () => {
   return (
     <StyledSlogan>
-      <SectionTitle>I Am Available For Freelance</SectionTitle>
-      <Button>Hire me</Button>
+      <Container>
+        <FlexWrapper direction={"column"} align={"center"}>
+          <SectionTitle>I Am Available For Freelance</SectionTitle>
+          <Button>Hire me</Button>
+        </FlexWrapper>
+      </Container>
     </StyledSlogan>
   );
 };
 
-const StyledSlogan = styled.section`
-  min-height: 30vh;
-  background-color: #e0dbfe;
-`;
+const StyledSlogan = styled.section``;
