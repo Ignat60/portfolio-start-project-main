@@ -2,46 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 
-// первый вариант типизации
-// type MenuPropsType = {
-//   menuItems: Array<string>
-// }
-// второй вариант задания типов пропс (используетс для одного значения)
-
-export const HeaderMenu = (props: { menuItems: Array<string> }) => {
+export const Menu: React.FC<{ menuItems: Array<string> }> = (props: {
+  menuItems: Array<string>;
+}) => {
   return (
-    <StyledHeaderMenu>
-      <ul>
-        {props.menuItems.map((item: string, index: number) => {
-          return (
-            <ListItem key={index}>
-              <Link href="v#">
-                {item}
-                <Mask>
-                  <span>{item}</span>
-                </Mask>
-                <Mask>
-                  <span>{item}</span>
-                </Mask>
-              </Link>
-            </ListItem>
-          );
-        })}
-      </ul>
-    </StyledHeaderMenu>
+    <ul>
+      {props.menuItems.map((item: string, index: number) => {
+        return (
+          <ListItem key={index}>
+            <Link href="v#">
+              {item}
+              <Mask>
+                <span>{item}</span>
+              </Mask>
+              <Mask>
+                <span>{item}</span>
+              </Mask>
+            </Link>
+          </ListItem>
+        );
+      })}
+    </ul>
   );
 };
-
-const StyledHeaderMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-  }
-  @media ${theme.media.tablet} {
-    display: none;
-  }
-`;
 
 const Link = styled.a`
   text-align: center;
@@ -50,7 +33,6 @@ const Link = styled.a`
   font-weight: 400;
   color: transparent;
 `;
-
 const Mask = styled.span`
   position: absolute;
   top: 0;
@@ -69,6 +51,7 @@ const Mask = styled.span`
     }
   }
 `;
+
 const ListItem = styled.li`
   position: relative;
 
