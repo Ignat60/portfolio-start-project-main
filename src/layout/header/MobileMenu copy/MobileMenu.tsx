@@ -23,13 +23,7 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
   );
 };
 
-const StyledMobileMenu = styled.nav`
-  display: none;
-
-  @media ${theme.media.tablet} {
-    display: block;
-  }
-`;
+const StyledMobileMenu = styled.nav``;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
