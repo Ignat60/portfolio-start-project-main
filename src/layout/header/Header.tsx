@@ -2,9 +2,9 @@ import React from "react";
 import { Logo } from "../../assets/components/logo/Logo";
 import { Container } from "../../assets/components/Container";
 import { FlexWrapper } from "../../assets/components/flexWrapper";
-import { DeskTopMenu } from "./desktopMenu/DesktopMenu";
-import { MobileMenu } from "./MobileMenu copy/MobileMenu";
+import { MobileMenu } from "./headerMenu/MobileMenu copy/MobileMenu";
 import { S } from "./Header_Styles";
+import { DeskTopMenu } from "./headerMenu/desktopMenu/DesktopMenu";
 
 const items = ["Home", "Skills", "Works", "Testimony", "Contact"];
 

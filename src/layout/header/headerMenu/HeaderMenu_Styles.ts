@@ -1,29 +1,68 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
-import { Menu } from "../menu/Menu";
 
-// первый вариант типизации
-// type MenuPropsType = {
-//   menuItems: Array<string>
-// }
-// второй вариант задания типов пропс (используетс для одного значения)
+const Link = styled.a`
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: transparent;
+`;
+const Mask = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 50%;
+  overflow-y: hidden;
+  color: ${theme.color.accent};
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
-  return (
-    <StyledMobileMenu>
-      <BurgerButton isOpen={false}>
-        <span></span>
-      </BurgerButton>
+  & + & {
+    top: 50%;
+    span {
+      display: inline-block;
+      transform: translateY(-50%);
+    }
+  }
+`;
 
-      <MobileMenuPopup isOpen={false}>
-        <Menu menuItems={props.menuItems} />
-      </MobileMenuPopup>
-    </StyledMobileMenu>
-  );
-};
+const MenuItem = styled.li`
+  position: relative;
 
-const StyledMobileMenu = styled.nav``;
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background-color: ${theme.color.accent};
+
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    right: -10px;
+    z-index: 1;
+
+    transform: scale(0);
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(1);
+    }
+
+    ${Mask} {
+      transform: skewX(10deg) translateX(3px);
+      color: ${theme.color.font};
+
+      & + ${Mask} {
+        transform: skewX(10deg) translateX(-3px);
+      }
+    }
+  }
+`;
+
+// MobileMenu
+
+const MobileMenu = styled.nav``;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
@@ -106,3 +145,12 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     }
   }
 `;
+
+export const S = {
+  Link,
+  MenuItem,
+  Mask,
+  MobileMenu,
+  MobileMenuPopup,
+  BurgerButton,
+};
