@@ -1,22 +1,13 @@
 import React from "react";
-import styled from "styled-components";
-// import { theme } from "../../../styles/Theme";
 import { Menu } from "../menu/Menu";
+import { S } from "../HeaderMenu_Styles";
 
 export const DeskTopMenu: React.FC<{ menuItems: Array<string> }> = (props: {
   menuItems: Array<string>;
 }) => {
   return (
-    <StyledDeskTopMenu>
+    <S.DeskTopMenu>
       <Menu menuItems={props.menuItems} />
-    </StyledDeskTopMenu>
+    </S.DeskTopMenu>
   );
 };
-
-const StyledDeskTopMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-  }
-`;

@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
 
+// Menu
 const Link = styled.a`
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
@@ -146,6 +147,16 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `;
 
+// DesktopMenu
+
+const DeskTopMenu = styled.nav`
+  ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+`;
+
 export const S = {
   Link,
   MenuItem,
@@ -153,4 +164,5 @@ export const S = {
   MobileMenu,
   MobileMenuPopup,
   BurgerButton,
+  DeskTopMenu,
 };
