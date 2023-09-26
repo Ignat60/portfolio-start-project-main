@@ -5,6 +5,46 @@ import { Skill } from "./skill/skill";
 import styled from "styled-components";
 import { Container } from "../../../assets/components/Container";
 
+const skillData = [
+  {
+    iconId: "codeSvg",
+    title: "html5",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+  },
+
+  {
+    iconId: "css",
+    title: "css3",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+  },
+  {
+    iconId: "codeSvg",
+    title: "html5",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+  },
+  {
+    iconId: "figmaSvg",
+    title: "React",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+  },
+  {
+    iconId: "styledComponentsIcon",
+    title: "styled components",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+  },
+  {
+    iconId: "codeSvg",
+    title: "html5",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+  },
+];
+
 export const Skills = () => {
   return (
     <StyledSkills>
