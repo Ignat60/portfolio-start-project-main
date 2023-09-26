@@ -2,12 +2,12 @@ import React from "react";
 import { SectionTitle } from "../../../assets/components/SectionTitle";
 import { FlexWrapper } from "../../../assets/components/flexWrapper";
 import { Skill } from "./skill/skill";
-import styled from "styled-components";
 import { Container } from "../../../assets/components/Container";
+import { S } from "./Skills_Styles";
 
 const skillData = [
   {
-    iconId: "codeSvg",
+    iconId: "code",
     title: "html5",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
@@ -20,13 +20,13 @@ const skillData = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
   },
   {
-    iconId: "codeSvg",
-    title: "html5",
+    iconId: "figmaSvg",
+    title: "WEB DESIgN",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
   },
   {
-    iconId: "figmaSvg",
+    iconId: "reactSvg",
     title: "React",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
@@ -38,8 +38,8 @@ const skillData = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
   },
   {
-    iconId: "codeSvg",
-    title: "html5",
+    iconId: "typescriptSvg",
+    title: "typeScript",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
   },
@@ -47,60 +47,22 @@ const skillData = [
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <Container>
         <SectionTitle>My Skills</SectionTitle>
         <FlexWrapper wrap="wrap" justify="space-between">
-          <Skill
-            iconId={"codeSvg"}
-            title={"html5"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
-            }
-          />
-
-          <Skill
-            iconId={"css"}
-            title={"css3"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
-            }
-          />
-
-          <Skill
-            iconId={"figmaSvg"}
-            title={"React"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
-            }
-          />
-
-          <Skill
-            iconId={"reactSvg"}
-            title={"typescript"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
-            }
-          />
-
-          <Skill
-            iconId={"styledComponentsIcon"}
-            title={"styled components"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
-            }
-          />
-          <Skill
-            iconId={"typescriptSvg"}
-            title={"WEB DESIgN"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
-            }
-          />
+          {skillData.map((s, index) => {
+            return (
+              <Skill
+                iconId={s.iconId}
+                key={index}
+                title={s.title}
+                description={s.description}
+              />
+            );
+          })}
         </FlexWrapper>
       </Container>
-    </StyledSkills>
+    </S.Skills>
   );
 };
-
-const StyledSkills = styled.section``;
