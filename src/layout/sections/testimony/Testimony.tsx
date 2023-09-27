@@ -7,7 +7,7 @@ import { FlexWrapper } from "../../../assets/components/flexWrapper";
 import { S } from "./../skills/Skills_Styles";
 import { Container } from "../../../assets/components/Container";
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
   return (
     <StyledTestimony>
       <Container>
