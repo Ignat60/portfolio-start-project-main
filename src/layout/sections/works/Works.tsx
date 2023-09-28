@@ -8,7 +8,7 @@ import timerImg from "./../../../assets/images/picture_2.png";
 import { Container } from "../../../assets/components/Container";
 import { S } from "./Works_Styles";
 
-const worksItems = ["All", "landing page", "React", "spa"];
+const tabsItems = ["All", "landing page", "React", "spa"];
 
 const workData = [
   {
@@ -29,7 +29,7 @@ export const Works: React.FC = () => {
     <S.Works>
       <Container>
         <SectionTitle>My Works</SectionTitle>
-        <TabMenu menuItems={worksItems} />
+        <TabMenu tabsItems={tabsItems} />
 
         <FlexWrapper justify="space-between" align={"flex-start"} wrap={"wrap"}>
           {workData.map((w, index) => {

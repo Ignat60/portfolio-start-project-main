@@ -9,11 +9,11 @@ import { Link } from "../../../../assets/components/Link";
 // }
 // второй вариант задания типов пропс (используетс для одного значения)
 
-export const TabMenu = (props: { menuItems: Array<string> }) => {
+export const TabMenu = (props: { tabsItems: Array<string> }) => {
   return (
     <StyledTabMenu>
       <ul>
-        {props.menuItems.map((item: string, index: number) => {
+        {props.tabsItems.map((item: string, index: number) => {
           return (
             <ListItem key={index}>
               <Link href="v#">{item}</Link>
