@@ -3,20 +3,29 @@ import styled from "styled-components";
 // import { theme } from "../../../../styles/Theme";
 import { Link } from "../../../../assets/components/Link";
 
-// первый вариант типизации
-// type MenuPropsType = {
-//   menuItems: Array<string>
-// }
-// второй вариант задания типов пропс (используетс для одного значения)
+type TabMenuPropsType = {
+  tabsItems: Array<{
+    status: "all" | "landing" | "react" | "spa";
+    title: string;
+  }>;
+  changeFilterStatus: (value: "all" | "landing" | "react" | "spa") => void;
+};
 
-export const TabMenu = (props: { tabsItems: Array<string> }) => {
+export const TabMenu = (props: TabMenuPropsType) => {
   return (
     <StyledTabMenu>
       <ul>
-        {props.tabsItems.map((item: string, index: number) => {
+        {props.tabsItems.map((item, index) => {
           return (
             <ListItem key={index}>
-              <Link href="v#">{item}</Link>
+              <Link
+                as={"button"}
+                onClick={() => {
+                  props.changeFilterStatus(item.status);
+                }}
+              >
+                {item.title}
+              </Link>
             </ListItem>
           );
         })}
