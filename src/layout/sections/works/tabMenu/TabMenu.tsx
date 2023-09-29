@@ -3,12 +3,15 @@ import styled from "styled-components";
 // import { theme } from "../../../../styles/Theme";
 import { Link } from "../../../../assets/components/Link";
 
+export type TabsStatusType = "all" | "landing" | "react" | "spa";
+
 type TabMenuPropsType = {
   tabsItems: Array<{
-    status: "all" | "landing" | "react" | "spa";
+    status: TabsStatusType;
     title: string;
   }>;
-  changeFilterStatus: (value: "all" | "landing" | "react" | "spa") => void;
+  changeFilterStatus: (value: TabsStatusType) => void;
+  currentFilterStatus: string;
 };
 
 export const TabMenu = (props: TabMenuPropsType) => {
@@ -19,6 +22,7 @@ export const TabMenu = (props: TabMenuPropsType) => {
           return (
             <ListItem key={index}>
               <Link
+                active={props.currentFilterStatus === item.status}
                 as={"button"}
                 onClick={() => {
                   props.changeFilterStatus(item.status);
