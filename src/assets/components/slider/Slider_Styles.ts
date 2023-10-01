@@ -1,11 +1,15 @@
+// import AliceCarousel from "react-alice-carousel";
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 const Slider = styled.div`
   max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: solid 1px red;
 `;
 
 const Slide = styled.div`
@@ -29,6 +33,7 @@ const Pagination = styled.div`
     display: inline-block;
     width: 7px;
     height: 7px;
+
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
 
