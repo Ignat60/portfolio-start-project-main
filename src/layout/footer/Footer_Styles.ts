@@ -7,7 +7,6 @@ const SocialList = styled.ul`
   gap: 20px;
   margin: 30px 0;
 `;
-
 const SocialItem = styled.li``;
 
 const SocialLink = styled.a`
@@ -27,7 +26,6 @@ const SocialLink = styled.a`
     transform: translateY(-4px);
   }
 `;
-
 const Copyright = styled.small`
   text-align: center;
   font-size: 14px;
@@ -35,6 +33,7 @@ const Copyright = styled.small`
   opacity: 0.5;
 `;
 const Footer = styled.footer`
+  position: relative;
   background-color: ${theme.color.primaryBg};
   padding: 40px 0;
 `;
@@ -48,7 +47,6 @@ const Name = styled.span`
   })};
   letter-spacing: 3px;
 `;
-
 export const S = {
   SocialList,
   SocialItem,
