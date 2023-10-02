@@ -47,9 +47,8 @@ export const Slider = () => (
     <AliceCarousel
       mouseTracking
       items={items}
-
-                    {/* пример добавления иконки вместо стрелки из библиотеки
-добавляем OPTIONS из библиотеки  ( почему-то не работает)*/}
+      /* пример добавления иконки вместо стрелки из библиотеки
+добавляем OPTIONS из библиотеки  */
 
       renderPrevButton={() => {
         return <Icon iconId={"code"} />;
